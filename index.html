@@ -1,38 +1,285 @@
+
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Prathyusha's QA Engineer portfolio: manual testing, automation testing and API testing.">
-<title>Prathyusha | QA Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<header class="header"><a class="logo" href="#home"><b>P</b> Prathyusha<span>.</span></a><button class="menu" aria-label="Toggle menu">☰</button>
-<nav id="nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a class="navbtn" href="#contact">Contact ↗</a></nav></header>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prathyusha | QA Engineer Portfolio</title>
+<style>
+:root {
+  --bg: #090d18;
+  --card: #121a2b;
+  --text: #f1f5f9;
+  --muted: #a1acc0;
+  --accent: #8b7cff;
+  --border: #26334b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1100px, 90%); margin: auto; }
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: #090d18ed;
+  border-bottom: 1px solid var(--border);
+}
+nav {
+  min-height: 70px;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 20px;
+}
+.logo { font-size: 22px; font-weight: bold; }
+.logo span, .accent { color: var(--accent); }
+.navlinks { display: flex; gap: 22px; flex-wrap: wrap; }
+.navlinks a { color: var(--muted); font-size: 14px; }
+.navlinks a:hover { color: white; }
+section { padding: 75px 0; }
+.hero { min-height: 490px; display: flex; align-items: center; }
+.eyebrow { color: var(--accent); font-weight: bold; }
+h1 { font-size: clamp(38px, 7vw, 64px); line-height: 1.15; margin: 14px 0; }
+h2 { font-size: 30px; margin-bottom: 25px; }
+h3 { margin-bottom: 10px; }
+p { color: var(--muted); margin-bottom: 15px; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 25px; }
+.btn {
+  display: inline-block; padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 9px; font-weight: bold;
+}
+.btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+.btn:hover { transform: translateY(-2px); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 24px; border-radius: 14px;
+}
+.card p { margin-bottom: 0; }
+.tag {
+  display: inline-block; padding: 5px 10px;
+  margin: 5px 4px 0 0; border-radius: 20px;
+  background: #272345; color: #c6bcff; font-size: 12px;
+}
+.section-intro { max-width: 700px; margin-bottom: 25px; }
+.contact-links { display: flex; gap: 12px; flex-wrap: wrap; }
+footer {
+  border-top: 1px solid var(--border);
+  padding: 25px; text-align: center; color: var(--muted);
+}
+@media(max-width:650px) {
+  nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+  .navlinks { gap: 12px; }
+  section { padding: 55px 0; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <div class="logo">Prathyusha<span>.</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
 <main>
-<section class="hero wrap" id="home"><div><p class="eyebrow"><i></i> OPEN TO QA OPPORTUNITIES</p><p class="hello">Hello, I'm</p><h1>Prathyusha<span>.</span></h1><h2>QA Engineer <em>|</em> Manual &amp; Automation Testing</h2>
-<p class="intro">I help build reliable software by exploring application behaviour, finding issues before users do, and validating fixes with thoughtful testing.</p>
-<div class="actions"><a class="btn primary" href="#projects">Explore my work ↘</a><a class="btn" href="#contact">Get in touch</a></div>
-<p class="meta">Manual testing <i></i> Automation testing <i></i> API testing</p></div>
-<div class="codecard"><div class="codehead"><span>●</span><span>●</span><span>●</span><small>qa-checklist.js</small></div><pre><b>01</b> <strong>const</strong> quality = {
-<b>02</b>   curiosity: <mark>true</mark>,
-<b>03</b>   attentionToDetail: <mark>true</mark>,
-<b>04</b>   userFocus: <mark>true</mark>,
-<b>05</b>   bugsFound: <label>"not enough yet"</label>
-<b>06</b> };
-<br><span class="pass">✓ Ready to test</span></pre><div class="float f1">✓ Functional testing</div><div class="float f2">⌘ Automation</div></div></section>
-<section class="section wrap" id="about"><p class="label">01 / ABOUT</p><h2>Quality is in the <span>details.</span></h2><div class="two"><p class="big">I'm a QA Engineer with around <strong>2 years of experience</strong> in software testing, combining hands-on manual testing with automation and API validation.</p><div class="muted"><p>I enjoy understanding how a product works, translating requirements into meaningful test scenarios, identifying edge cases, reporting defects clearly, and retesting fixes.</p><blockquote>My approach: understand the requirement, test the real workflow, challenge the edge cases, and communicate findings clearly.</blockquote></div></div></section>
-<section class="section wrap" id="skills"><p class="label">02 / SKILLS</p><h2>Tools I work <span>with.</span></h2><p class="sub">A practical toolkit across manual, automation and API testing.</p><div class="cards skills">
-<article><b>◎</b><h3>Manual Testing</h3><p>Functional · Regression · Smoke · Sanity · UI · Exploratory · Test case design · Defect lifecycle</p></article>
-<article><b>⌘</b><h3>Automation Testing</h3><p>Selenium WebDriver · Java · Playwright · Robot Framework · Appium</p></article>
-<article><b>⇄</b><h3>API Testing</h3><p>Postman · REST API validation · Request/response checks · Status codes · JSON</p></article>
-<article><b>▤</b><h3>Frameworks &amp; CI</h3><p>TestNG · Cucumber · Maven · Jenkins · Allure Reports</p></article>
-<article><b>⌗</b><h3>Programming &amp; Data</h3><p>Core Java · Python fundamentals · JavaScript basics · SQL</p></article>
-<article><b>◈</b><h3>Tools &amp; Process</h3><p>Jira · Git · Bitbucket · Agile/Scrum · SDLC · STLC</p></article></div></section>
-<section class="section wrap" id="experience"><p class="label">03 / EXPERIENCE</p><h2>How I contribute to <span>quality.</span></h2><div class="timeline"><article><div class="timehead"><h3>QA Engineer / Software Tester</h3><small>AROUND 2 YEARS</small></div><p class="purple">Professional experience</p><ul><li>Review requirements and identify test scenarios, test data and edge cases.</li><li>Prepare and execute test cases for functional, regression, UI and end-to-end workflows.</li><li>Report defects with clear steps, actual results, expected results and supporting evidence.</li><li>Retest fixes and perform regression testing to check for side effects.</li><li>Validate REST APIs using Postman and verify request/response behaviour.</li><li>Work with automation tools including Selenium, Playwright, Robot Framework and Appium.</li></ul></article></div><p class="fine">Add your exact employer name, dates and responsibilities before sharing this portfolio.</p></section>
-<section class="section wrap" id="projects"><p class="label">04 / PROJECTS</p><h2>Selected testing <span>work.</span></h2><p class="sub">Examples of application domains and testing activities.</p><div class="cards projects">
-<article class="featured"><small>01 / WEB APPLICATION · QA</small><h3>Office Monitoring Platform</h3><p>A workplace monitoring application involving employee registration, facial recognition, attendance, visitor tracking, camera monitoring and alerts.</p><h4>Testing focus</h4><ul><li>Employee registration, profile updates and deletion workflows.</li><li>Attendance status, alerts and name synchronisation.</li><li>Camera detection, face capture quality and access workflows.</li><li>Negative scenarios, edge cases and UI behaviour.</li></ul><div class="tags">Manual Testing <i>Functional</i><i>Regression</i><i>UI</i></div></article>
-<article><small>02 / E-COMMERCE · QA</small><h3>JPMS – John Paul Mitchell Systems</h3><p>US-based e-commerce application. Testing focus includes customer-facing shopping workflows and application functionality.</p><h4>Testing focus</h4><ul><li>Manual validation of key user workflows.</li><li>Functional and regression test execution.</li><li>Automation coverage for selected scenarios.</li><li>Defect reporting and verification.</li></ul><div class="tags">Manual Testing <i>Automation</i><i>Web</i></div></article>
-<article><small>03 / API TESTING · PRACTICE</small><h3>REST API Validation</h3><p>API testing practice focused on validating endpoints, authentication, payloads and CRUD operations.</p><h4>Testing focus</h4><ul><li>GET, POST, PUT and DELETE request validation.</li><li>Positive and negative test scenarios.</li><li>Response status, headers and JSON body checks.</li><li>Authentication and required-field validation.</li></ul><div class="tags">Postman <i>REST API</i><i>JSON</i></div></article></div><p class="fine">Only publish project details you are permitted to share. Add repository/demo links where available; never publish confidential client data.</p></section>
-<section class="section wrap"><p class="label">05 / TESTING APPROACH</p><h2>From requirement to <span>confidence.</span></h2><div class="steps"><article><b>01</b><h3>Understand</h3><p>Review requirements, workflows and acceptance criteria.</p></article><article><b>02</b><h3>Design</h3><p>Create test scenarios, test cases and useful test data.</p></article><article><b>03</b><h3>Execute</h3><p>Run manual, API and automated checks where appropriate.</p></article><article><b>04</b><h3>Improve</h3><p>Report defects, retest fixes and share clear test outcomes.</p></article></div></section>
-<section class="section wrap" id="contact"><div class="contact"><p class="label">06 / CONTACT</p><h2>Let's make software <span>better.</span></h2><p>I'm interested in QA Engineer opportunities where I can contribute to product quality and keep growing across manual and automation testing.</p><div class="actions"><a class="btn primary" href="mailto:bprathyusha661@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/bandi-prathyusha-70b2a722b" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/bprathyusha661-collab" target="_blank" rel="noreferrer">GitHub ↗</a></div><p class="fine">Replace the placeholder email and profile links with your actual public links.</p></div></section></main>
-<footer><span>© <b id="year"></b> Prathyusha</span><span>QA Engineer Portfolio</span><a href="#home">Back to top ↑</a></footer><script src="script.js"></script></body></html>
+<section class="hero container" id="home">
+  <div>
+    <p class="eyebrow">QA ENGINEER | MANUAL & AUTOMATION TESTING</p>
+    <h1>Hello, I'm <span class="accent">Prathyusha</span></h1>
+    <h2>Quality Assurance Engineer</h2>
+    <p>
+      I have around 2 years of experience in software testing,
+      with hands-on exposure to manual testing, automation testing
+      and API testing. I enjoy finding defects, validating
+      application behaviour and helping deliver reliable software.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="PrathyushaBandi_Resume.pdf" download>
+        Download Resume ↓
+      </a>
+      <a class="btn" href="#projects">Explore My Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a QA Engineer interested in understanding application
+        requirements, designing effective test scenarios and
+        identifying issues before they reach users.
+      </p>
+      <p>
+        My testing experience includes functional, regression,
+        UI and API testing, along with exposure to web and mobile
+        automation frameworks.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Manual Testing</h3>
+        <span class="tag">Functional Testing</span>
+        <span class="tag">Regression Testing</span>
+        <span class="tag">Smoke Testing</span>
+        <span class="tag">Sanity Testing</span>
+        <span class="tag">UI Testing</span>
+        <span class="tag">Test Case Design</span>
+        <span class="tag">Bug Reporting</span>
+      </div>
+      <div class="card">
+        <h3>Automation Testing</h3>
+        <span class="tag">Selenium WebDriver</span>
+        <span class="tag">Playwright</span>
+        <span class="tag">Appium</span>
+        <span class="tag">Robot Framework</span>
+        <span class="tag">Cucumber</span>
+        <span class="tag">TestNG</span>
+      </div>
+      <div class="card">
+        <h3>API Testing</h3>
+        <span class="tag">Postman</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">CRUD Operations</span>
+        <span class="tag">JSON Validation</span>
+        <span class="tag">Status Code Validation</span>
+      </div>
+      <div class="card">
+        <h3>Programming & Tools</h3>
+        <span class="tag">Core Java</span>
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Git</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">Maven</span>
+        <span class="tag">Jira</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Professional Experience</h2>
+    <div class="card">
+      <h3>QA Engineer</h3>
+      <p>Software Testing | Around 2 Years</p>
+      <ul>
+        <li>Review requirements and identify test scenarios and edge cases.</li>
+        <li>Prepare and execute manual test cases.</li>
+        <li>Perform functional, regression and UI testing.</li>
+        <li>Execute API requests and validate responses using Postman.</li>
+        <li>Identify, document and retest defects.</li>
+        <li>Work with developers to verify fixes and improve application quality.</li>
+        <li>Contribute to automation testing using available frameworks.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Office Monitoring System</h3>
+        <p>
+          An office monitoring platform involving employee
+          registration, facial recognition, attendance,
+          visitor tracking, camera monitoring and alerts.
+        </p>
+        <p><strong>Testing contributions:</strong></p>
+        <p>
+          Tested registration, face capture, employee profile
+          updates, attendance, alerts, camera detection,
+          access logs and validation scenarios.
+        </p>
+        <span class="tag">Manual Testing</span>
+        <span class="tag">Functional Testing</span>
+        <span class="tag">UI Testing</span>
+      </article>
+
+      <article class="card">
+        <h3>JPMS - E-commerce Application</h3>
+        <p>
+          E-commerce application for product browsing
+          and online shopping workflows.
+        </p>
+        <p><strong>Testing contributions:</strong></p>
+        <p>
+          Worked on manual and automation testing of
+          application workflows, functional scenarios,
+          regression checks and defect verification.
+        </p>
+        <span class="tag">Manual Testing</span>
+        <span class="tag">Automation Testing</span>
+        <span class="tag">Regression Testing</span>
+      </article>
+
+      <article class="card">
+        <h3>API Testing Practice</h3>
+        <p>
+          API testing practice covering CRUD operations,
+          authentication, request parameters and response validation.
+        </p>
+        <span class="tag">Postman</span>
+        <span class="tag">REST API</span>
+        <span class="tag">JSON</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Let's Connect</h2>
+    <p class="section-intro">
+      I am interested in QA Engineer opportunities where I can
+      contribute my testing skills and continue learning.
+    </p>
+    <div class="contact-links">
+      <a class="btn primary"
+         href="mailto:bprathyusha661@gmail.com">Email Me</a>
+      <a class="btn"
+         href="https://www.linkedin.com/in/bandi-prathyusha-70b2a722b"
+         target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a class="btn"
+         href="https://github.com/bprathyusha661-collab"
+         target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Prathyusha | QA Engineer Portfolio
+</footer>
+
+</body>
+</html>
